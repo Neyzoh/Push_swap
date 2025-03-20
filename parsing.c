@@ -24,10 +24,11 @@ void    ft_exit_error(char **args, int malloc_flag)
     //exit error
     exit(1);
 }
-int *parsing(int ac, char **av)
+t_list **parsing(int ac, char **av)
 {
     int malloc_flag;
     char **args_tab;
+    t_list **pile_a;
     int i;
 
     malloc_flag = 0;
@@ -42,16 +43,18 @@ int *parsing(int ac, char **av)
     }
     if (!is_doublon(args_tab))
         ft_exit_error(args_tab, malloc_flag);
+    pile_a = ft_create_stack(args_tab);
     if (malloc_flag)
         ft_free_tab(args_tab);
-    return(0);
+    return(pile_a);
 }
-int main(int argc, char **argv)
-{
-    if (argc < 2)
-        ft_exit_error(argv, 0);
-    parsing(argc, argv);
-    // Continuer avec le reste de votre programme
-    // ...
-    return (0);
-}
+
+// int main(int argc, char **argv)
+// {
+//     if (argc < 2)
+//         ft_exit_error(argv, 0);
+//     parsing(argc, argv);
+//     // Continuer avec le reste de votre programme
+//     // ...
+//     return (0);
+// }

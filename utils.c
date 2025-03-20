@@ -6,7 +6,7 @@
 /*   By: adammour <skn.aga108@gmail.com>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:49:59 by adammour          #+#    #+#             */
-/*   Updated: 2025/02/27 14:47:46 by adammour         ###   ########.fr       */
+/*   Updated: 2025/03/13 16:38:56 by adammour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,18 @@ void ft_free_tab(char **tab)
         i++;
     }
     free(tab);
+}
+
+void    ft_print_stack(t_list **a)
+{
+    t_list *cur;
+
+    cur = *a;
+    while (cur)
+    {
+        printf("node_val : %d\nnode_idx : %d\n\n", cur->node_val, cur->node_idx);
+        cur = cur->next;
+    }
 }
 // int main(int ac, char **av)
 // {

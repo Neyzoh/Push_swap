@@ -3,14 +3,11 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = push_swap
 
-MANDATORY = 
+MANDATORY = parsing.c parsing_utils.c  utils.c libft.c
+
 SRCS = $(MANDATORY)
 
-SRCSB = $(MANDATORY)
-
 OBJ = $(SRCS:.c=.o)
-
-OBJB = $(SRCSB:.c=.o)
 
 .c.o:
 	${CC} ${CFLAGS} -c $< -o $(<:.c=.o)
@@ -18,7 +15,7 @@ OBJB = $(SRCSB:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 	rm -f $(OBJB)
