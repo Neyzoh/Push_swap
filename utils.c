@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: adammour <skn.aga108@gmail.com>            +#+  +:+       +#+        */
+/*   By: adammour <adammour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:49:59 by adammour          #+#    #+#             */
-/*   Updated: 2025/03/13 16:38:56 by adammour         ###   ########.fr       */
+/*   Updated: 2025/03/27 12:26:59 by adammour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,9 +103,10 @@ void    ft_print_stack(t_list **a)
     t_list *cur;
 
     cur = *a;
+    printf("========stack\n");
     while (cur)
     {
-        printf("node_val : %d\nnode_idx : %d\n\n", cur->node_val, cur->node_idx);
+        printf("node_val : %d\n", cur->node_val);
         cur = cur->next;
     }
 }

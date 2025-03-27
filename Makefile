@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = push_swap
 
-MANDATORY = parsing.c parsing_utils.c  utils.c libft.c
+MANDATORY = parsing.c parsing_utils.c  utils.c libft.c operations.c push_swap.c
 
 SRCS = $(MANDATORY)
 
@@ -18,7 +18,7 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	rm -f $(OBJB)
+	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)

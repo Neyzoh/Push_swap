@@ -24,11 +24,11 @@ void    ft_exit_error(char **args, int malloc_flag)
     //exit error
     exit(1);
 }
-t_list **parsing(int ac, char **av)
+t_list *parsing(int ac, char **av)
 {
     int malloc_flag;
     char **args_tab;
-    t_list **pile_a;
+    t_list *pile_a;
     int i;
 
     malloc_flag = 0;

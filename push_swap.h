@@ -24,6 +24,8 @@ t_list *ft_create_stack(char **args);
 void    ft_print_stack(t_list **a);
 int *sort_tab(int *tab);
 int *copy_tab(char **tab);
+t_list *parsing(int ac, char **av);
+
 
 // Libft
 int	ft_strncmp(const char	*s1, const char	*s2, unsigned int n);
@@ -37,5 +39,8 @@ int is_numeric(char *str);
 int is_int_limit(char *str);
 int is_doublon(char **str);
 void ft_free_tab(char **tab);
+
+// operations
+void    sa(t_list **a);
 
 #endif

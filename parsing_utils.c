@@ -111,19 +111,19 @@ int *sort_tab(int *tab)
     return(tab);
 }
 
-int main(int ac, char **av)
-{
-    t_list *a;
-    // int i = 0;
-    // int *a;
-    // a = copy_tab(av + 1);
-    // a = sort_tab(a);
-    (void)ac;
-    a = ft_create_stack(av + 1);
-    ft_print_stack(&a);
-    // while (i < 6)
-    // {
-    //     printf("%d ", a[i]);
-    //     i++;
-    // }
-}
+// int main(int ac, char **av)
+// {
+//     t_list *a;
+//     // int i = 0;
+//     // int *a;
+//     // a = copy_tab(av + 1);
+//     // a = sort_tab(a);
+//     (void)ac;
+//     a = ft_create_stack(av + 1);
+//     ft_print_stack(&a);
+//     // while (i < 6)
+//     // {
+//     //     printf("%d ", a[i]);
+//     //     i++;
+//     // }
+// }

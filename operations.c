@@ -1,22 +1,47 @@
 #include "push_swap.h"
 
+// void    sa(t_list **a)
+// {
+//     t_list *tmp = (*a)->next;
+//     tmp->next = *a;
+//     tmp->next = *a;
+// }
+
 void    sa(t_list **a)
 {
-    t_list *tmp = (*a)->next;
-    (*a) = tmp->next;
-    tmp->next = *a;
+    if (*a == NULL || (*a)->next == NULL)
+        return; 
+
+    t_list *first_node = *a;
+    t_list *second_node = (*a)->next;
+    t_list *third_node = second_node->next;
+
+    second_node->next = first_node;
+    first_node->next = third_node;
+    *a = second_node;
 }
+
 void    sb(t_list **b)
 {
-    t_list *tmp = (*b)->next;
-    (*b) = tmp->next;
-    tmp->next = *b;
+    if (*b == NULL || (*b)->next == NULL)
+        return ;
+
+    t_list *first_node = *b;
+    t_list *second_node = (*b)->next;
+    t_list *third_node = second_node->next;
+
+    second_node->next = first_node;
+    first_node->next = third_node;
+    *b = second_node;
+    
 }
+
 void    ss(t_list **a, t_list **b)
 {
     sa(a);
     sb(b);
 }
+
 void    pa(t_list **a, t_list **b)
 {
     if (*b == NULL)
@@ -28,7 +53,7 @@ void    pa(t_list **a, t_list **b)
     *a = tmp;
 }
 
-void    pb(t_list **b, t_list **a)
+void    pb(t_list **a, t_list **b)
 {
     if (*a == NULL)
         return;
@@ -38,6 +63,7 @@ void    pb(t_list **b, t_list **a)
     tmp->next = *b;
     *b = tmp;
 }
+
 void    ra(t_list **a)
 {
     t_list *first = *a;
@@ -72,6 +98,7 @@ void    rr(t_list **a, t_list **b)
     ra(a);
     rb(b);
 }
+
 void    rra(t_list **a)
 {
     t_list *last = *a;
@@ -83,7 +110,7 @@ void    rra(t_list **a)
         last = last->next;
     }
 
-    second_last = NULL;
+    second_last->next = NULL;
     last->next = *a;
     *a = last;
 }
@@ -101,7 +128,7 @@ void    rrb(t_list **b)
         last = last->next;
     }
 
-    second_last = NULL;
+    second_last->next = NULL;
     last->next = *b;
     *b = last;
 }
@@ -111,3 +138,17 @@ void    rrr(t_list **a, t_list **b)
     rra(a);
     rrb(b);
 }
+
+// int main(int ac, char **av)
+// {
+//     t_list *a;
+//     //t_list *b;
+
+//     a = parsing(ac, av);
+//     //b = NULL;
+
+//     ft_print_stack(&a);
+//     rra(&a);
+//     ft_print_stack(&a);
+//     return 0;
+// }
