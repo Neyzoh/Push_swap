@@ -90,6 +90,7 @@ int *copy_tab(char **tab)
     }
     return(tab_int);
 }
+
 int *sort_tab(int *tab)
 {
     int i;

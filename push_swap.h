@@ -42,5 +42,11 @@ void ft_free_tab(char **tab);
 
 // operations
 void    sa(t_list **a);
+void    ra(t_list **a);
+void    pb(t_list **a, t_list **b);
+
+//sort
+int list_size(t_list **a);
+
 
 #endif
