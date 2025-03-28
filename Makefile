@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 NAME = push_swap
 
-MANDATORY = parsing.c parsing_utils.c  utils.c libft.c operations.c push_swap.c
+MANDATORY = parsing.c parsing_utils.c  utils.c libft.c operations.c push_swap.c sort_big_list.c sort_utils.c
 
 SRCS = $(MANDATORY)
 

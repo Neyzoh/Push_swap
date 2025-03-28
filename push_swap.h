@@ -42,11 +42,24 @@ void ft_free_tab(char **tab);
 
 // operations
 void    sa(t_list **a);
-void    ra(t_list **a);
+void    sb(t_list **b);
+void    ss(t_list **a, t_list **b);
+void    pa(t_list **a, t_list **b);
 void    pb(t_list **a, t_list **b);
+void    ra(t_list **a);
+void    rb(t_list **b);
+void    rr(t_list **a, t_list **b);
+void    rra(t_list **a);
+void    rrb(t_list **b);
+void    rrr(t_list **a, t_list **b);
 
 //sort
 int list_size(t_list **a);
+int is_sorted(t_list **a);
+int max_bits(t_list **a);
+void    radix_sort(t_list **a, t_list **b);
 
+//utils 
+void    ft_free_list(t_list **a);
 
 #endif

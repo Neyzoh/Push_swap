@@ -6,7 +6,7 @@
 /*   By: adammour <adammour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 12:49:59 by adammour          #+#    #+#             */
-/*   Updated: 2025/03/27 12:26:59 by adammour         ###   ########.fr       */
+/*   Updated: 2025/03/28 16:12:51 by adammour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,19 +97,33 @@ void ft_free_tab(char **tab)
     }
     free(tab);
 }
-
-void    ft_print_stack(t_list **a)
+void    ft_free_list(t_list **a)
 {
-    t_list *cur;
-
-    cur = *a;
-    printf("========stack\n");
-    while (cur)
+    t_list *current = *a;
+    t_list *tmp;
+    
+    tmp = NULL;
+    while (current)
     {
-        printf("node_val : %d\n", cur->node_val);
-        cur = cur->next;
+        tmp = current->next;
+        free(current);
+        current = tmp;
     }
+    
+    
 }
+// void    ft_print_stack(t_list **a)
+// {
+//     t_list *cur;
+
+//     cur = *a;
+//     printf("========stack\n");
+//     while (cur)
+//     {
+//         printf("node_val : %d\n", cur->node_val);
+//         cur = cur->next;
+//     }
+// }
 // int main(int ac, char **av)
 // {
 //     (void)ac;
